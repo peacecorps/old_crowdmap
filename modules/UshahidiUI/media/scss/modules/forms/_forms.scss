@@ -1,0 +1,145 @@
+/*------------------------------------*\
+	$CONTENTS
+\*------------------------------------*/
+/**
+ * GENERAL...............general form overrides
+ * CUSTOM DROPDOWNS...............custom form overrides
+ * SEARCH BAR...............search bar styling
+ * LIST VIEW FILTER...............list view filter styling
+ * PSEUDO ELEMENTS...............pseudo element styling
+ */
+
+
+
+
+
+
+ /*------------------------------------*\
+ 	$GENERAL
+ \*------------------------------------*/
+
+input[type="radio"], select {
+	margin: 0 3px 1em 0;
+}
+
+textarea {
+	height: 400px;
+	font-family: inherit;
+	font-weight: normal;
+	font-size: emCalc(14px);
+	line-height: 1.6;
+	margin-bottom: 1.25em;
+	text-rendering: optimizeLegibility;
+}
+
+select {
+	-webkit-appearance: none !important;
+	background: $white image-url("dropdown-arrow.svg") no-repeat;
+	background-size: 9px;
+	background-position-x: 97%;
+	background-position-y: center;
+	border: 1px solid #cccccc;
+	padding: 0.78em emCalc(16px) 0.78em 0.78em;
+	font-family: inherit;
+	font-weight: normal;
+	font-size: emCalc(14px);
+	line-height: 1.6;
+	color: $sub-body-font-color;
+	text-rendering: optimizeLegibility;
+	@include border-radius($global-radius);
+}
+
+select[multiple] {
+	background-image: none;
+}
+
+@-moz-document url-prefix() {
+  select {
+   	background: #fafafa;
+  	padding: 0.7em 1em 0.78em 0.78em;
+  }
+}
+
+/*------------------------------------*\
+	$CUSTOM DROPDOWNS
+\*------------------------------------*/
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 100%; /* FF fix */
+	padding: 10px;
+	@include border-radius($global-radius);
+}
+
+form.custom .custom.dropdown {
+	height: 2.9em;
+	@include border-radius($global-radius);
+	.current {
+	margin-top: .4em;
+	margin-left: 1.4em;
+	}
+	.selector {
+	height: 3.3125em;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+		$SEARCH BAR
+\*------------------------------------*/
+
+.search-bar input[type="text"] {
+	@media #{$medium} {
+		@include border-radius(0px);
+	}
+}
+
+.search-bar form.custom .custom.dropdown {
+	@media #{$medium} {
+		margin-bottom: 0;
+	}
+	@media #{$medium} {
+		@include border-radius(0px);
+	}
+}
+
+
+
+
+/*------------------------------------*\
+		$LIST VIEW FILTER
+\*------------------------------------*/
+
+.list-view-filter form.custom {
+	@media #{$small} {
+		margin-bottom: 0;
+	}
+}
+
+form.custom .custom.dropdown .current {
+	margin-left: 0.4em;
+}
+
+
+
+
+/*------------------------------------*\
+		$PSEUDO ELEMENTS
+\*------------------------------------*/
+
+form.custom .custom.dropdown ul li:hover {
+	background-color: $accent-color;
+	color: $white;
+}
+
+form.custom .custom.dropdown ul li.selected:hover {
+	background: $body-bg;
+	cursor: "none";
+	color: $body-font-color;
+}
+
+form.custom .custom.checkbox.checked:before {
+	margin-top: 5px;
+	font-size: 20px;
+}

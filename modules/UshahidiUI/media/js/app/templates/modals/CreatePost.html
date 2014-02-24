@@ -1,0 +1,33 @@
+	<div class="modal-header">
+		<button class="back-button">Back</button>
+		<h4>Create Post</h4>
+		<a class="close-reveal-modal">&#215;</a>
+	</div> <!-- end modal-header -->
+
+	<div class="modal-wrapper">
+
+		<div class="form-options-nav-wrapper">
+			{{#if fieldsets}}
+			<dl class="form-options-nav">
+				<dt>Options:</dt>
+				{{#each fieldsets}}
+					<dd class="{{#if active}}active{{/if}}">
+						<a class="js-switch-fieldset" href="#fieldset-{{name}}" title="{{name}}">{{legend}}</a>
+					</dd>
+				{{/each}}
+			</dl>
+			{{/if}}
+		</div>
+
+		<section class="post-form-wrapper">
+		</section> <!-- end create-post-options -->
+	</div> <!-- end modal-wrapper -->
+
+	<section class="modal-footer">
+		<div class="modal-submit">
+			<button type="submit" form="create-post-form"><i class="fa  fa-plus  fa-lg"></i> Create Post</button>
+		</div>
+	</section> <!-- end modal-footer -->
+
+
+

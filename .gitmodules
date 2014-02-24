@@ -1,0 +1,54 @@
+[submodule "system"]
+	path = system
+	url = git://github.com/kohana/core.git
+[submodule "modules/minion"]
+	path = modules/minion
+	url = git://github.com/kohana/minion.git
+[submodule "modules/migrations"]
+	path = modules/migrations
+	url = git://github.com/kohana-minion/tasks-migrations.git
+[submodule "modules/database"]
+	path = modules/database
+	url = git://github.com/kohana/database.git
+[submodule "modules/orm"]
+	path = modules/orm
+	url = git://github.com/kohana/orm.git
+[submodule "modules/image"]
+	path = modules/image
+	url = git://github.com/kohana/image.git
+[submodule "modules/cache"]
+	path = modules/cache
+	url = git://github.com/kohana/cache.git
+[submodule "modules/unittest"]
+	path = modules/unittest
+	url = git://github.com/kohana/unittest.git
+[submodule "application/vendor/gisconverter"]
+	path = application/vendor/gisconverter
+	url = git://github.com/rjmackay/gisconverter.php.git
+[submodule "modules/koauth/vendor/oauth2-server-php"]
+	path = modules/koauth/vendor/oauth2-server-php
+	url = git://github.com/bshaffer/oauth2-server-php.git
+[submodule "modules/media"]
+	path = modules/media
+	url = git://github.com/rjmackay/kohana-media.git
+[submodule "modules/imagefly"]
+	path = modules/imagefly
+	url = git://github.com/rjmackay/kohana-imagefly.git
+[submodule "modules/ACL"]
+	path = modules/ACL
+	url = https://github.com/Wouterrr/ACL
+[submodule "modules/A1"]
+	path = modules/A1
+	url = https://github.com/rjmackay/A1
+[submodule "modules/A2"]
+	path = modules/A2
+	url = https://github.com/Wouterrr/A2
+[submodule "modules/KO3-Event"]
+	path = modules/KO3-Event
+	url = git://github.com/rjmackay/KO3-Event.git
+[submodule "modules/email"]
+	path = modules/email
+	url = git://github.com/shadowhand/email.git
+[submodule "plugins/twilio/vendor/twilio"]
+	path = plugins/twilio/vendor/twilio
+	url = https://github.com/twilio/twilio-php

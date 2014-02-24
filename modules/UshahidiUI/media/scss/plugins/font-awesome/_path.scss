@@ -1,0 +1,10 @@
+/* FONT PATH
+ * -------------------------- */
+
+@import "compass/css3/font-face";
+
+@include font-face("FontAwesome",font-files("fontawesome-webfont.eot",
+"fontawesome-webfont.eot?#iefix",
+"fontawesome-webfont.woff",
+"fontawesome-webfont.ttf",
+"fontawesome-webfont.svg"), "normal", "normal");

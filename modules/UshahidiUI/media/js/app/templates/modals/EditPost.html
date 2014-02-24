@@ -1,0 +1,115 @@
+	<div class="modal-header">
+		<h4>Edit Post</h4>
+		<a class="close-reveal-modal">&#215;</a>
+	</div> <!-- end modal-header -->
+
+	<div class="modal-wrapper">
+		<section class="post-details">
+			<div class="post-header">
+				{{!-- FIXME: Hiding post category marker until we have some way to specify the primary category
+				<div class="post-category-marker"></div> <!-- end .post-category-marker -->
+				--}}
+
+				<div class="post-title">
+					<h5>{{title}}</h5>
+				</div> <!-- end .post-title -->
+
+			</div> <!-- end .post-header -->
+
+			<div class="post-body">
+				<div class="post-image">
+
+					<div class="post-meta">
+						<div class="post-meta-details">
+							<h6>Post Details</h6>
+							<div class="post-author">
+								<p><i class="fa  fa-user"></i><strong class="" >{{#if user}}<a href="#users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a>{{else}}Anonymous{{/if}}</strong></p>
+							</div> <!-- end .post-author -->
+
+							{{#if location}}
+							<div class="post-location-meta">
+								<p><i class="fa  fa-map-marker"></i><span class="post-location  underline" ><a href="">{{location.lat}}, {{location.lon}}</a></span></p>
+							</div> <!-- end .post-location-meta -->
+							{{/if}}
+
+							<div class="post-time-meta">
+								<p><i class="fa  fa-clock-o"></i><strong class="post-time" >{{ datetime-fromNow created }}</strong></p>
+							</div> <!-- end .post-time-meta -->
+
+							<div class="post-published-status">
+								{{#if isPublished}}
+									<p><i class="fa  fa-file-o"></i><strong class="post-time" >Published</strong></p>
+								{{else}}
+									{{!-- @todo add ucfirst handler and format status --}}
+									<p><i class="fa  fa-file"></i><strong class="post-time" >{{status}}</strong></p>
+								{{/if}}
+							</div> <!-- end .post-published-status -->
+						</div> <!-- end .post-details -->
+
+						{{#if tags}}
+						<div class="post-categories">
+							<h6>Categories <small class="add-a-category"><a href="#">add</a></small></h6>
+							<ul>
+								{{#each tags}}
+								<a href="#"><li {{#if title}}title="{{ description }}"{{/if}}>
+									<i class="fa  fa-circle"  {{#if color}}style="color: #{{color}}"{{/if}}></i>
+									{{tag}}
+									 <i class="fa  fa-times-circle"></i>
+								</li></a>
+								{{/each}}
+							</ul>
+						</div> <!-- end .post-categories -->
+						{{/if}}
+					</div> <!-- end .post-meta -->
+
+				</div> <!-- end .post-body -->
+
+				<div class="form-options-nav-wrapper">
+					{{#if fieldsets}}
+					<dl class="form-options-nav">
+						<dt>Options:</dt>
+						{{#each fieldsets}}
+							<dd class="{{#if active}}active{{/if}}">
+								<a class="js-switch-fieldset" href="#fieldset-{{name}}" title="{{name}}">{{legend}}</a>
+							</dd>
+						{{/each}}
+					</dl>
+					{{/if}}
+				</div>
+
+				<div class="post-form-wrapper">
+
+				</div> <!-- end .post-details -->
+
+				{{!-- TODO : Show recent revisions
+
+				<div class="post-wrapper">
+					<div class="post-history">
+						<h6>Post History</h6>
+						<ul class="post-history-list">
+
+							<li class="post-history-list-item">edited by <span class="post-history-name"><a href="#">{User Name}</a></span></li>
+							<div class="post-history-time"><span><i class="fa  fa-clock-o"></i> 3 hours ago</span></div>
+
+							<li class="post-history-list-item">published by <span class="post-history-name"><a href="#">{Admin Display Title}</a></span></li>
+							<div class="post-history-time"><span><i class="fa  fa-clock-o"></i> 6 hours ago</span></div>
+
+							<li class="post-history-list-item">created by <span class="post-history-name"><a href="#">{Anonymous}</a></span></li>
+							<div class="post-history-time"><span><i class="fa  fa-clock-o"></i> 14 hours ago</span></div>
+
+						</ul>
+					</div>
+				</div>
+				--}}
+			</div> <!-- end .post-body -->
+		</section> <!-- end .post -->
+
+	</div> <!-- end modal-wrapper -->
+
+	<section class="modal-footer">
+
+		<div class="modal-submit">
+			<button type="submit" form="edit-post-form"><i class="fa  fa-plus  fa-lg"></i> Save Changes</button>
+		</div>
+
+	</section> <!-- end modal-footer -->
